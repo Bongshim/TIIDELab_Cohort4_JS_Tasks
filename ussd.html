@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USSD Loader</title>
+</head>
+
+<body>
+
+    <script>
+
+        // Options for the USSD loader
+        const choice = prompt(`
+        Access Bank
+        1. Account Balance
+        2. Airtime-self
+        3. Airtime-Others
+        4. Transfer
+        `);
+
+
+        // Switch case for the USSD loader
+        switch (choice) {
+            case "1": // Account Balance
+
+                // Prompt to enter PIN
+                const pin = prompt(`
+                To continue, please enter your PIN. 
+                N10 charge applies`);
+                switch (pin) {
+                    case "1234":
+                        alert(`
+                        Your account balance is N10,000,000.00
+                        `);
+                        break;
+                    default:
+                        alert(`
+                        Invalid PIN. Please try again.
+                        `);
+                        break;
+                }
+
+                break;
+
+            case "2": // Airtime-self
+                // Prompt to enter amount
+                const amount = prompt(`Enter amount`);
+                alert(`You have successfully purchased N${amount} airtime.`);
+
+                break;
+
+            case "3": // Airtime-Others
+                // Prompt to enter amount
+                const amountOther = prompt(`Enter amount`);
+                const numberOther = prompt(`Enter number`);
+                const networkOther = prompt(`
+                    Select network provider
+                    1. MTN
+                    2. Airtel
+                    3. 9mobile
+                    4. Glo
+                `);
+
+                // Check for pin and validate transaction
+                const pinOther = prompt(`
+                To continue, please enter your PIN. 
+                N10 charge applies`);
+
+                switch (pinOther) {
+                    case "1234":
+                        confirm(`Purchase N${amountOther} airtime to ${numberOther}.`);
+                        alert(`You have successfully purchased N${amountOther} airtime to ${numberOther}.`);
+                        break;
+                    default:
+                        alert(`
+                        Invalid PIN. Please try again.
+                        `);
+                        break;
+                }
+
+                break;
+
+            case "4": // Transfer
+                // Prompt to enter amount
+                const amountTransfer = prompt(`Enter amount`);
+                const numberTransfer = prompt(`Enter account number`);
+                const bankTransfer = prompt(`
+                    Select beneficiary bank
+                    1. Access Bank
+                    2. First Bank
+                    3. United Bank of Africa
+                    4. Zenith Bank
+                `);
+
+                // Check for pin and validate transaction
+                const pinTransfer = prompt(`
+                Transfer N${amountTransfer} to Uke Bongshim Edward, 
+                ${numberTransfer}, at N20.50 charge.
+                To continue, please enter your PIN.
+                `)
+
+                switch (pinTransfer) {
+                    case "1234":
+                        confirm(`Transfer N${amountTransfer} to Uke Bongshim Edward?`);
+                        alert(`You have successfully transferred N${amountTransfer} to Uke Bongshim Edward.`);
+                        break;
+                    default:
+                        alert(`
+                        Invalid PIN. Please try again.
+                        `);
+                        break;
+                }
+
+                break;
+            default:
+                alert("Invalid choice");
+                break;
+        }
+
+    </script>
+</body>
+
+</html>
