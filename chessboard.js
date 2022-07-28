@@ -7,9 +7,9 @@ let chessBoard = (n) => {
     let result = "";
   
     // loop through rows
-    for (let i = 1; i <= n; i++) { // 1,2,3 = row
+    for (let i = 1; i <= n; i++) { 
       // loop through columns
-      for (let j = 1; j <= n; j++) { // 1,2,3,4,5,6,7,8 = column
+      for (let j = 1; j <= n; j++) { 
         // if row is odd
         if (i % 2 == 0) {
           if (j % 2 == 0) {
