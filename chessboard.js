@@ -7,10 +7,10 @@ let chessBoard = (n) => {
     let result = "";
   
     // loop through rows
-    for (let i = 1; i <= n; i++) {
+    for (let i = 1; i <= n; i++) { // 1,2,3 = row
       // loop through columns
-      for (let j = 1; j <= n; j++) {
-        // if row is even
+      for (let j = 1; j <= n; j++) { // 1,2,3,4,5,6,7,8 = column
+        // if row is odd
         if (i % 2 == 0) {
           if (j % 2 == 0) {
             result += " ";
@@ -18,7 +18,7 @@ let chessBoard = (n) => {
             result += "#";
           }
         } else {
-          // if row is odd
+          // if row is even
           if (j % 2 == 0) {
             result += "#";
           } else {
