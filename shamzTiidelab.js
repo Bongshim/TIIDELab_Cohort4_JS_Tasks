@@ -6,14 +6,16 @@ let shamzTiidelab = (num) => {
   let result = "";
 
   for (let i = 1; i <= num; i++) {
+    // if number is divisible by 6 and 8 print ShamzTIIDELAB
     if (i % 6 == 0 && i % 8 == 0) {
       result += "ShamsTIIDELAB ";
-    } else if (i % 6 == 0 && i % 8 != 0) {
+    } else if (i % 6 == 0 && i % 8 != 0) { // if number is divisible by 6 but not 8 print Shams
       result += "Shams ";
-    } else if (i % 8 == 0 && i % 6 != 0) {
+    } else if (i % 8 == 0 && i % 6 != 0) { // if number is divisible by 8 but not 6 print TIIDELab
       result += "TIIDELAB ";
     } else {
-      result += i + " ";
+        // add spaces after each number
+        result += i + " ";
     }
   }
 
@@ -21,37 +23,3 @@ let shamzTiidelab = (num) => {
 };
 
 console.log(shamzTiidelab(200));
-
-/* 
-    Function prints a chessboard of size n x n.
-*/
-
-let chessBoard = (val) => {
-  let result = "";
-
-  // loop through rows
-  for (let i = 1; i <= val; i++) {
-    // loop through columns
-    for (let j = 1; j <= val; j++) {
-      // if row is even
-      if (i % 2 == 0) {
-        if (j % 2 == 0) {
-          result += " ";
-        } else {
-          result += "#";
-        }
-      } else {
-        // if row is odd
-        if (j % 2 == 0) {
-          result += "#";
-        } else {
-          result += " ";
-        }
-      }
-    }
-    result += "\n";
-  }
-  return result;
-};
-
-console.log(chessBoard(8));
