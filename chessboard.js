@@ -32,4 +32,30 @@ let chessBoard = (n) => {
     return result;
   };
   
-  console.log(chessBoard(8));
+  // console.log(chessBoard(8));
+
+
+
+  // Task
+
+  let names = [
+    {
+      "firstName": "Shams",
+      "LastName": "Aderoju"
+    },
+    {
+      "firstName": "Kadir",
+      "LastName": "Salami"
+    },
+    {
+      "firstName": "Mohammadu",
+      "LastName": "Buhari"
+    }
+  ]
+
+let newnames = [];
+names.forEach((name)=>{
+  newnames.push(`${name.firstName} ${name.LastName} `) 
+  
+})
+console.log(newnames.toString())
